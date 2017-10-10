@@ -9,13 +9,24 @@ import android.widget.TextView;
 
 public class Word  {
 
+    private int mImage;
     private String mMiwokTranslation;
     private String mDefaultTranslation;
 
 
+    public Word (int image, String miwokTranslation, String defaultTranslation){
+        mImage = image;
+        mMiwokTranslation = miwokTranslation;
+        mDefaultTranslation = defaultTranslation;
+    }
+
     public Word (String miwokTranslation, String defaultTranslation){
         mMiwokTranslation = miwokTranslation;
         mDefaultTranslation = defaultTranslation;
+    }
+
+    public int getImage() {
+        return mImage;
     }
 
     public String getMiwokTranslation() {
