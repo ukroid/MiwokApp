@@ -2,15 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="88dp"
-    android:orientation="horizontal">
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/list_item_height"
+    android:orientation="horizontal"
+    android:background="@color/tan_background">
 
     <ImageView
         android:id="@+id/image_view"
-        android:layout_width="88dp"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
         android:src="@mipmap/ic_launcher"
-        android:background="@color/tan_background"
+
         tools:ignore="ContentDescription"/>
 
     <LinearLayout
@@ -26,7 +28,7 @@
             android:id="@+id/miwok_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="?android:textAppearanceMedium"
             android:textStyle="bold"
             android:textColor="@android:color/white"
             tools:text="lutti" />
@@ -35,7 +37,7 @@
             android:id="@+id/default_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
             tools:text="one"
          />
