@@ -9,9 +9,10 @@ import android.widget.TextView;
 
 public class Word  {
 
-    private int mImage;
+    private int mImage = NO_IMAGE;
     private String mMiwokTranslation;
     private String mDefaultTranslation;
+    private static final int NO_IMAGE = -1;
 
 
     public Word (int image, String miwokTranslation, String defaultTranslation){
@@ -36,4 +37,9 @@ public class Word  {
     public String getDefaultTranslation() {
         return mDefaultTranslation;
     }
+
+    public boolean hasImage(){
+        return mImage != NO_IMAGE;
+    }
+
 }

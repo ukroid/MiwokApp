@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static android.view.View.GONE;
+
 /**
  * Created by artem on 15.07.2017.
  */
@@ -46,7 +48,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image_view);
-        imageView.setImageResource(currentWord.getImage());
+
+        if (currentWord.hasImage()) {
+            imageView.setImageResource(currentWord.getImage());
+            imageView.setVisibility(View.VISIBLE);
+
+        } else {
+             imageView.setVisibility(GONE);
+        }
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
