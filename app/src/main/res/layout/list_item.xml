@@ -10,25 +10,21 @@
     <ImageView
         android:id="@+id/image_view"
         android:layout_width="@dimen/list_item_height"
-        android:layout_height="@dimen/list_item_height"
-        android:src="@mipmap/ic_launcher"
-
-        tools:ignore="ContentDescription"/>
+        android:layout_height="@dimen/list_item_height"/>
 
     <LinearLayout
+        android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="@color/category_numbers"
-        android:gravity="center"
-        >
+        android:gravity="center">
 
         <TextView
             android:id="@+id/miwok_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="?android:textAppearanceMedium"
+            android:textSize="@dimen/words_textsize"
             android:textStyle="bold"
             android:textColor="@android:color/white"
             tools:text="lutti" />
@@ -37,7 +33,7 @@
             android:id="@+id/default_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="?android:textAppearanceMedium"
+            android:textSize="@dimen/words_textsize"
             android:textColor="@android:color/white"
             tools:text="one"
          />

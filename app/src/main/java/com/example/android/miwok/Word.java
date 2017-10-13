@@ -1,17 +1,15 @@
 package com.example.android.miwok;
 
-import android.view.View;
-import android.widget.TextView;
-
 /**
  * Created by artem on 15.07.2017.
  */
 
 public class Word  {
 
-    private int mImage = NO_IMAGE;
+
     private String mMiwokTranslation;
     private String mDefaultTranslation;
+    private int mImage = NO_IMAGE;
     private static final int NO_IMAGE = -1;
 
 
