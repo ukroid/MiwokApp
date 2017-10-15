@@ -1,13 +1,21 @@
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static java.security.AccessController.getContext;
+
 public class NumbersActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +45,7 @@ public class NumbersActivity extends AppCompatActivity {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // word_list.xml file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        final ListView listView = (ListView) findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         // {@link ListView} will display list items for each word in the list of words.
@@ -46,5 +54,69 @@ public class NumbersActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_one);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 1) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_two);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 2) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_three);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 3) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_four);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 4) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_five);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 5) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_six);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 6) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_seven);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 7) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_eight);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 8) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_nine);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 9) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_ten);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+            }
+        }
+
+        );
+
+
     }
+
+
 }
+
+
+//if (listView.getSelectedItemPosition() == 0) {

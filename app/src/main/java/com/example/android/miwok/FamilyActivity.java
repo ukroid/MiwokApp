@@ -1,7 +1,10 @@
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -43,6 +46,63 @@ public class FamilyActivity extends AppCompatActivity {
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.family_father);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 1) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.family_mother);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 2) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.family_son);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 3) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.family_daughter);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 4) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.family_older_brother);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 5) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.family_younger_brother);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 6) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.family_older_sister);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 7) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.family_younger_sister);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 8) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.family_grandmother);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 9) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.family_grandfather);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+            }
+        }
+
+        );
 
     }
 }

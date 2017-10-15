@@ -1,7 +1,10 @@
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -42,6 +45,55 @@ public class ColorsActivity extends AppCompatActivity {
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.color_red);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 1) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.color_green);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 2) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.color_brown);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 3) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.color_gray);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 4) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.color_black);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 5) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.color_white);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 6) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.color_dusty_yellow);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+                if (i == 7) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.color_mustard_yellow);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(false);
+                }
+
+            }
+        }
+
+        );
 
     }
 }
